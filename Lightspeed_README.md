@@ -17,9 +17,6 @@ This game is ideal for 1 or 2 players, just depends on whether you want to pract
 Game Extras
 -------------------
 
-
-> **Don't freak out, I know these are crazy:**
-
 > - If you hit a special bonus light, your time will be extended by 15 seconds.
 > - Hitting certain colors in a row will give you bonus points.
 > - Hitting the Dot of Death will decrease your time by 10 seconds.
