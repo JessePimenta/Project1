@@ -6,10 +6,13 @@ $(function(){
     console.log('works');
   });
 
-  $('.startStop').click(function(){
+  $('.begin').click(function(){
     console.log('works');
   });
 
+  $('.stop').click(function(){
+    console.log('works');
+  });
 
 
 
