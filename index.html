@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Lightspeed</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="style.css" media="screen">
   </head>
   <body>
@@ -10,7 +11,7 @@
     <center>Welcome to Lightspeed</center>
     <form name="cpanel">
     <center>
-    <table cellspacing=3>
+    <table cellspacing=20>
     <tr>
     <td><input type="button" name="startstop" value=" Start Game | Stop Game "></td>
     <td><pre>    </pre></td>
@@ -18,7 +19,7 @@
     <td><input type="text" name="timeleft" size="4"></td>
     </tr>
     <tr>
-    <td><input type="text" name="state" size="20" value="Push Start to Play"></td>
+    <td><input type="button" name="begin" size="20" value="Push Start to Play"></td>
     <td><pre>    </pre></td>
     <td align=right>Score:</td>
     <td><input type="text" name="score" size="4"></td>
@@ -28,95 +29,95 @@
     </form>
     <form name="Hermann">
     <center>
-    <table cellspacing=3>
+    <table cellspacing=20>
     <tr>
-    <td colspan=10><hr size=1></td>
+    <td colspan=10><hr size=3></td>
     </tr>
     <tr>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(0)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(1)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(2)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(3)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(4)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(5)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(6)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(7)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(8)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(9)"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(0)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(1)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(2)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(3)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(4)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(5)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(6)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(7)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(8)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(9)" class="dots"></td>
     </tr>
     <tr>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(10)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(11)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(12)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(13)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(14)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(15)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(16)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(17)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(18)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(19)"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(10)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(11)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(12)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(13)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(14)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(15)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(16)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(17)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(18)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(19)" class="dots"></td>
     </tr>
     <tr>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(20)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(21)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(22)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(23)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(24)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(25)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(26)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(27)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(28)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(29)"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(20)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(21)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(22)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(23)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(24)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(25)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(26)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(27)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(28)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(29)" class="dots"></td>
     </tr>
     <tr>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(30)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(31)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(32)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(33)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(34)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(35)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(36)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(37)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(38)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(39)"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(30)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(31)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(32)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(33)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(34)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(35)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(36)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(37)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(38)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(39)" class="dots"></td>
     </tr>
     <tr>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(40)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(41)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(42)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(43)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(44)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(45)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(46)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(47)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(48)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(49)"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(40)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(41)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(42)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(43)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(44)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(45)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(46)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(47)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(48)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(49)" class="dots"></td>
     </tr>
     <tr>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(50)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(51)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(52)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(53)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(54)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(55)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(56)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(57)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(58)"></td>
-    <td align="center" valign="center"><input type="radio" onClick="lightDot(59)"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(50)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(51)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(52)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(53)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(54)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(55)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(56)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(57)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(58)" class="dots"></td>
+    <td align="center" valign="center"><input type="radio" id="lightDot(59)" class="dots"></td>
     </tr>
-    <tr><td colspan=10><hr size=1></td>
+    <tr><td colspan=10><hr size=3></td>
     </tr></table></center></form>
 
     <center><table cellspacing=3><tr><td><code>
     <p><strong>Instructions:</strong></p>
-    <p>The objective of the game is to see who, p1 or p2,<br>
+    <li><p>The objective of the game is to see who, p1 or p2,<br>
        can hit more light-dots on the 60-dot grid in a span of 30 seconds.<br>
        The dots will be randomly generated, and will have color combinations you can hit for extra points. <br>
-        Demonstrate your agility, and how cool you are.<br></p>
-    <li>1 point per hit, minus 1 point per miss.</li><BR>
+        Demonstrate your agility, and how cool you are.<br></li>
+    <li>1 point per hit, minus 1 point per miss.</li><BR></p>
     </td>
     </tr>
     </table></center>
-
+<script src="app.js" charset="utf-8"></script>
   </body>
 </html>
