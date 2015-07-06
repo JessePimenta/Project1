@@ -1,4 +1,4 @@
-Lightfastness
+Lightspeed
 ===================
 
 
@@ -14,13 +14,13 @@ This game is ideal for 1 or 2 players, just depends on whether you want to pract
 
 ----------
 
-Game Extras 
+Game Extras
 -------------------
 
 
 > **Don't freak out, I know these are crazy:**
 
-> - If you hit a special bonus light, your time will be extended by 15 seconds. 
+> - If you hit a special bonus light, your time will be extended by 15 seconds.
 > - Hitting certain colors in a row will give you bonus points.
 > - Hitting the Dot of Death will decrease your time by 10 seconds.
 > - If you manage to hit over 40 dots in 30 seconds your time will be extended by 10 seconds.
@@ -32,7 +32,3 @@ Visual Representation
 --------------------
 The game interface is based on the illusion by Ludimar Hermann, and is meant to confuse your eyes while you play so you become blind by the second round.
 ![enter image description here](http://www.geier.hu/Hermann/Scintill_Sinus_Geier.gif)
-
-
-
-
