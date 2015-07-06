@@ -14,7 +14,7 @@ $('#begin').click(function(){
     countdownInterval = setInterval(function(){
       $('#countdownHolder')[0].value = countdownCurrent--;
       if(countdownCurrent === countdownEnd){
-        clearInterval(countdownInterval);
+        clearTimeout(countdownInterval);
         alert('game over!');
       }
 
@@ -28,7 +28,9 @@ $('#begin').click(function(){
 
 
   $('.dots').click(function(){
+    var randomLight = Math.floor(Math.random() * 59 + 1);
     console.log('works');
+
   });
 
   $('.begin').click(function(){

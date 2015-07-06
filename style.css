@@ -23,7 +23,7 @@ li {
 
 }
 
-input {
+input stop , begin {
 
   font-style: 'Helvetica';
   background-color: white;
@@ -51,4 +51,12 @@ form table tr {
 
 form {
 
+}
+
+
+.dots {
+  border-radius: 50%;
+  background-color: white;
+  height: 16px;
+  width: 14px;
 }
