@@ -33,7 +33,7 @@ $('#begin').click(function(){
 });
 
   $('.dots').click(function(){
-    if($(this).is(":focus")){score++}
+    if($(this).is(":focus")){score++;}
     console.log(score);
   $('#score')[0].value = score;
     var randomLight2 = Math.floor(Math.random() * 60);
