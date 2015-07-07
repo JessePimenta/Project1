@@ -10,9 +10,9 @@ var score=0;
 
 $(function(){
 
-$('#begin').click(function(){
+$('#begin').click(function(){                          // starts game
 
-  randomLight = Math.floor(Math.random() * 60);
+  randomLight = Math.floor(Math.random() * 60);       // i
   console.log(randomLight);
   $('.dots')[randomLight].focus(function(){
     alert( "Handler for .focus() called." );
@@ -31,16 +31,18 @@ $('#begin').click(function(){
       }, 1000);
 
 });
+  var checkDot = null;
 
   $('.dots').click(function(){
-    if($(this).is(":focus")){score++;}
-    else if($(this).not(":focus")) {
-      score--;
-    }
+    console.log(checkDot);
+    if(checkDot == this){score++;}
+    else{score--;}
+
     console.log(score);
   $('#score')[0].value = score;
     var randomLight2 = Math.floor(Math.random() * 60);
     console.log(randomLight2);
+    checkDot = $('.dots')[randomLight2];
     $('.dots')[randomLight2].focus(function(){
       alert( "Handler for .focus() called." );
     });
