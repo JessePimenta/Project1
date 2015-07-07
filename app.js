@@ -24,13 +24,13 @@ $('#begin').click(function(){
 });
 
 
-
-
-
   $('.dots').click(function(){
-    var randomLight = Math.floor(Math.random() * 59 + 1);
-    console.log('works');
-
+    var randomLight = Math.floor(Math.random() * 60);
+    console.log(randomLight);
+    $('.dots')[randomLight].focus(function(){
+      alert( "Handler for .focus() called." );
+    });
+    console.log($('.dots')[randomLight]);
   });
 
   $('.begin').click(function(){
