@@ -34,6 +34,9 @@ $('#begin').click(function(){
 
   $('.dots').click(function(){
     if($(this).is(":focus")){score++;}
+    else if($(this).not(":focus")) {
+      score--;
+    }
     console.log(score);
   $('#score')[0].value = score;
     var randomLight2 = Math.floor(Math.random() * 60);
@@ -44,17 +47,9 @@ $('#begin').click(function(){
     console.log($('.dots')[randomLight2]);
   });
 
-  $('.begin').click(function(){
-    var randomLight = Math.floor(Math.random() * 60);
-    console.log(randomLight);
-    $('.dots')[randomLight].focus(function(){
-    alert ("Handler for .focus() called.");
-    });
-    console.log('works');
-  });
-
   $('.stop').click(function(){
     console.log('works');
+    alert('paused');
   });
 
 }); // closing
