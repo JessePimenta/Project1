@@ -5,7 +5,7 @@ var countdownCurrent=0;
 var countdown=false;
 var countdownInterval;
 var countdownEnd = -1;
-var randomLight = Math.floor(Math.random() * 60);
+var randomLight = Math.floor(Math.random() * 30);
 var score= 0;
 var player1= 1;
 var player2= 2;
@@ -26,12 +26,12 @@ $(function(){
 
 $('#begin').click(function(){                          // starts game
 
-  randomLight = Math.floor(Math.random() * 60);       //
+  randomLight = Math.floor(Math.random() * 30);       //
   console.log(randomLight);
-  $('.dots')[randomLight].focus(function(){
+  $('.dotStyle')[randomLight].focus(function(){
     alert( "Handler for .focus() called." );
   });
-  console.log($('.dots')[randomLight]);
+  console.log($('.dotStyle')[randomLight]);
 
     countdownCurrent = countdownMax;
     console.log(countdownCurrent+" / "+countdownMax);
@@ -50,20 +50,20 @@ $('#begin').click(function(){                          // starts game
 });
   var checkDot = null;
 
-  $('.dots').click(function(){
+  $('.dotStyle').click(function(){
     console.log(checkDot);
     if(checkDot == this){score++;}
     else{score--;}
 
     console.log(score);
   $('#score')[0].value = score;
-    var randomLight2 = Math.floor(Math.random() * 60);
+    var randomLight2 = Math.floor(Math.random() * 30);
     console.log(randomLight2);
-    checkDot = $('.dots')[randomLight2];
-    $('.dots')[randomLight2].focus(function(){
+    checkDot = $('.dotStyle')[randomLight2];
+    $('.dotStyle')[randomLight2].focus(function(){
       alert( "Handler for .focus() called." );
     });
-    console.log($('.dots')[randomLight2]);
+    console.log($('.dotStyle')[randomLight2]);
   });
 
   $('.stop').click(function(){
