@@ -6,9 +6,10 @@ height: 792px;
 }
 
 #container {
-  width: 600px;
-  height: 600px;
+  width: 456px;
+  height: 445px;
   display: block;
+  background-color:rgb(124, 124, 124);
 
 
 }
@@ -19,29 +20,40 @@ height: 60px;
 background-color: black;
 float:left;
 display: inline-block;
-margin:0 10px;
+margin:0 8px;
 
 
 
 }
-.row{
+.squareRow{
   width: 100%;
   height: 62px;
   position: relative;
   display: block;
 }
-.dotsrow{
-  width: 10px;
+
+
+.dotRow{
+  width: 100%;
   height: 15px;
-  background-color: black;
-  border-radius: 50%;
   position: relative;
-  float: left;
-  display: inline-block;
-  margin: 0 30px;
-  margin-right: 34px;
-  left: 7%;
-  /* right: 0; *
+  display: block;
+}
+
+
+
+.dotStyle{
+width: 10px;
+height: 15px;
+background-color: white;
+border-radius: 50%;
+position: relative;
+float: left;
+display: inline-block;
+margin: 0px 32px;
+margin-right: 28px;
+/* left: 8%; */
+right: -37px;
 }
 /*.squaresrow2{
 width: 80px;
