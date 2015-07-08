@@ -56,8 +56,8 @@ $('#begin').click(function(){                          // starts game
     else{score--;}
 
     console.log(score);
-  $('#score')[0].value = score;
-  $('#player1Points')[0].value = score;
+  $('#score')[0].value = score+2;
+  $('#player1Points')[0].value = score+2;
     var randomLight2 = Math.floor(Math.random() * 30);
     console.log(randomLight2);
     checkDot = $('.dotStyle')[randomLight2];
