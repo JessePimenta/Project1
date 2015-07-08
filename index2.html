@@ -3,9 +3,36 @@
   <head>
     <link rel="stylesheet" href="style2.css">
     <meta charset="utf-8">
-    <title></title>
+    <title>Lightspeed</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
   <body>
+    <center><h2>Lightspeed</h2></center>
+    <center>Welcome to Lightspeed</center>
+    <form name="outer">
+    <center>
+    <table cellspacing=20>
+    <tr>
+    <td><input type="button" class="stop" value="Pause"></td>
+    <td><pre>    </pre></td>
+    <td align=right>Time Left:</td>
+    <td><input type="text" id="countdownHolder" size="4"></td>
+  </tr>
+  <tr>
+  <td><input type="button" id="begin" size="20" value="Push Start to Play"></td>
+  <td><pre><input type="reset" value="Reset"> </input></pre></td>
+  <td align=right> Score:</td>
+  <td><input type="text" id="score" size="4"></td>
+  </tr>
+  <tr>
+  <td align=right>P1 Score:</td>
+  <td><input type="text" id="player1Points" size="4"></td>
+  <td align=right>P2 Score:</td>
+  <td><input type="text" id="player2Points" size="4"></td>
+  </tr>
+  </table>
+  </center>
+  </form>
 <div id='container'>
 
   <div class="squareRow">
@@ -15,6 +42,7 @@
       <div id="square3" class="squares"></div>
       <div id="square4" class="squares"></div>
       <div id="square5" class="squares"></div>
+      <div id="square6" class="squares"></div>
       </div>
     <div class="dotRow">
         <button id="lightDot(0)" class="dotStyle"></button>
@@ -22,80 +50,92 @@
         <button id="lightDot(2)" class="dotStyle"></button>
         <button id="lightDot(3)" class="dotStyle"></button>
         <button id="lightDot(4)" class="dotStyle"></button>
+        <button id="lightDot(5)" class="dotStyle"></button>
     </div>
 
     <div class="squareRow">
-        <div id="square6"  class="squares"></div>
         <div id="square7"  class="squares"></div>
         <div id="square8"  class="squares"></div>
         <div id="square9"  class="squares"></div>
-        <div id="square10" class="squares"></div>
+        <div id="square10"  class="squares"></div>
         <div id="square11" class="squares"></div>
+        <div id="square12" class="squares"></div>
+        <div id="square13" class="squares"></div>
+
         </div>
       <div class="dotRow">
-          <button id="lightDot(5)" class="dotStyle"></button>
           <button id="lightDot(6)" class="dotStyle"></button>
           <button id="lightDot(7)" class="dotStyle"></button>
           <button id="lightDot(8)" class="dotStyle"></button>
           <button id="lightDot(9)" class="dotStyle"></button>
+          <button id="lightDot(10)" class="dotStyle"></button>
+          <button id="lightDot(11)" class="dotStyle"></button>
       </div>
 
       <div class="squareRow">
-          <div id="square12"  class="squares"></div>
-          <div id="square13"  class="squares"></div>
           <div id="square14"  class="squares"></div>
           <div id="square15"  class="squares"></div>
           <div id="square16"  class="squares"></div>
           <div id="square17"  class="squares"></div>
+          <div id="square18"  class="squares"></div>
+          <div id="square19"  class="squares"></div>
+          <div id="square20"  class="squares"></div>
           </div>
         <div class="dotRow">
-            <button id="lightDot(10)" class="dotStyle"></button>
-            <button id="lightDot(11)" class="dotStyle"></button>
             <button id="lightDot(12)" class="dotStyle"></button>
             <button id="lightDot(13)" class="dotStyle"></button>
             <button id="lightDot(14)" class="dotStyle"></button>
+            <button id="lightDot(15)" class="dotStyle"></button>
+            <button id="lightDot(16)" class="dotStyle"></button>
+            <button id="lightDot(17)" class="dotStyle"></button>
         </div>
 
         <div class="squareRow">
-            <div id="square18"  class="squares"></div>
-            <div id="square19"  class="squares"></div>
-            <div id="square20"  class="squares"></div>
             <div id="square21"  class="squares"></div>
             <div id="square22"  class="squares"></div>
             <div id="square23"  class="squares"></div>
+            <div id="square24"  class="squares"></div>
+            <div id="square25"  class="squares"></div>
+            <div id="square26"  class="squares"></div>
+            <div id="square27"  class="squares"></div>
             </div>
           <div class="dotRow">
-              <button id="lightDot(15)" class="dotStyle"></button>
-              <button id="lightDot(16)" class="dotStyle"></button>
-              <button id="lightDot(17)" class="dotStyle"></button>
               <button id="lightDot(18)" class="dotStyle"></button>
               <button id="lightDot(19)" class="dotStyle"></button>
+              <button id="lightDot(20)" class="dotStyle"></button>
+              <button id="lightDot(21)" class="dotStyle"></button>
+              <button id="lightDot(22)" class="dotStyle"></button>
+              <button id="lightDot(23)" class="dotStyle"></button>
           </div>
 
           <div class="squareRow">
-              <div id="square24"  class="squares"></div>
-              <div id="square25"  class="squares"></div>
-              <div id="square26"  class="squares"></div>
-              <div id="square27"  class="squares"></div>
               <div id="square28"  class="squares"></div>
               <div id="square29"  class="squares"></div>
+              <div id="square30"  class="squares"></div>
+              <div id="square31"  class="squares"></div>
+              <div id="square32"  class="squares"></div>
+              <div id="square33"  class="squares"></div>
+              <div id="square34"  class="squares"></div>
               </div>
             <div class="dotRow">
-                <button id="lightDot(20)" class="dotStyle"></button>
-                <button id="lightDot(21)" class="dotStyle"></button>
-                <button id="lightDot(22)" class="dotStyle"></button>
-                <button id="lightDot(23)" class="dotStyle"></button>
                 <button id="lightDot(24)" class="dotStyle"></button>
+                <button id="lightDot(25)" class="dotStyle"></button>
+                <button id="lightDot(26)" class="dotStyle"></button>
+                <button id="lightDot(27)" class="dotStyle"></button>
+                <button id="lightDot(28)" class="dotStyle"></button>
+                <button id="lightDot(29)" class="dotStyle"></button>
             </div>
 
             <div class="squareRow">
-                <div id="square29"  class="squares"></div>
-                <div id="square30"  class="squares"></div>
-                <div id="square31"  class="squares"></div>
-                <div id="square32"  class="squares"></div>
-                <div id="square33"  class="squares"></div>
-                <div id="square34"  class="squares"></div>
+                <div id="square35"  class="squares"></div>
+                <div id="square36"  class="squares"></div>
+                <div id="square37"  class="squares"></div>
+                <div id="square38"  class="squares"></div>
+                <div id="square39"  class="squares"></div>
+                <div id="square40"  class="squares"></div>
+                <div id="square41"  class="squares"></div>
                 </div>
+</div>
 </div>
   </body>
 </html>
