@@ -19,20 +19,12 @@ var player2round2;
 var player2round3;
 var player1Wins;
 var player2Wins;
-var playerMove = 0
+var playerMove = 0;
 
 
 $(function(){
 
 $('#begin').click(function(){                          // starts game
-
-  if (counter % 2===0 ){
-  	$(this).text('o');
-  }
-  else {
-  	$(this).text('x');
-  }
-
 
   randomLight = Math.floor(Math.random() * 60);       //
   console.log(randomLight);

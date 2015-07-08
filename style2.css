@@ -1,0 +1,160 @@
+body {
+position: absolute;
+display: block;
+width: 800px;
+height: 792px;
+}
+
+#container {
+  width: 600px;
+  height: 600px;
+  display: block;
+
+
+}
+
+.squares{
+width: 60px;
+height: 60px;
+background-color: black;
+float:left;
+display: inline-block;
+margin:0 10px;
+
+
+
+}
+.row{
+  width: 100%;
+  height: 62px;
+  position: relative;
+  display: block;
+}
+.dotsrow{
+  width: 10px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  float: left;
+  display: inline-block;
+  margin: 0 30px;
+  margin-right: 34px;
+  left: 7%;
+  /* right: 0; *
+}
+/*.squaresrow2{
+width: 80px;
+height: 80px;
+background-color: black;
+display: inline-block;
+margin-top: 0px;
+margin-right: 12px;
+margin-bottom: 12px;
+}
+.squaresrow3{
+width: 80px;
+height: 80px;
+background-color: black;
+display: inline-block;
+margin-top: 0px;
+margin-right: 12px;
+margin-bottom: 12px;
+
+}
+.squaresrow4{
+width: 80px;
+height: 80px;
+background-color: black;
+display: inline-block;
+margin-top: 0px;
+margin-right: 12px;
+margin-bottom: 12px;
+
+}
+.squaresrow5{
+width: 80px;
+height: 80px;
+background-color: black;
+display: inline-block;
+margin-top: 0px;
+margin-right: 12px;
+margin-bottom: 12px;
+
+}
+
+.dotsrow1{
+  width: 10px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  top: 80px;
+ left: 80px;
+}
+
+#container > div:nth-child(7) {
+
+
+}*/
+
+
+
+
+
+
+
+/*.dots{
+width: 5px;
+height: 16px;
+background-color: black;
+display: table;
+margin-top: 0px;
+margin-right: 10px;
+border-radius: 50%;
+}*/
+
+
+
+/*#square1 {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  display: inline-block;
+}
+
+#square2 {
+  width: 80px;
+  height: 80px;
+background-color: black;
+display: inline-block;
+
+}
+#square3 {
+  width: 80px;
+  height: 80px;
+background-color: black;
+display: inline-block;
+
+}
+#square4 {
+  width: 80px;
+  height: 80px;
+background-color: black;
+display: inline-block;
+
+}
+#square5 {
+  width: 80px;
+  height: 80px;
+background-color: black;
+display: inline-block;
+
+}
+#square6 {
+  width: 80px;
+  height: 80px;
+background-color: black;
+display: inline-block;
+}*/

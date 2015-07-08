@@ -1,6 +1,6 @@
 body {
   font-family: 'Helvetica';
-  background-color: black;
+  background-color:black;
   color: white;
   font-style: italic;
 }
@@ -33,30 +33,24 @@ input stop , begin {
 
 tr {
 height: 30px;
+width: 100px;
 }
 
 tr td {
-  background-color: black;
   opacity: 0%;
-  display: grid;
-
+  padding:
 }
 
-form table tr {
-  background-image: url('http://www.psy.ritsumei.ac.jp/~akitaoka/saccadecolor.gif');
-  background-position: center;
-  background-size: cover;
-
+#table {
+  width: 420px;
+  height: 300px;
 }
-
-form {
-
-}
-
 
 .dots {
   border-radius: 50%;
   background-color: white;
+  display: table;
   height: 16px;
   width: 14px;
+
 }
