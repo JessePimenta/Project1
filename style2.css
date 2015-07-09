@@ -24,7 +24,7 @@ body:hover {
 }
 
 #container:hover {
-  transition: background-color 30s ease;
+  transition: background-color 20s ease;
   background-color: white;
 
 }
