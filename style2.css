@@ -1,29 +1,30 @@
 body {
-
+background-color: black;
+color: white;
 display: block;
 width: 800px;
 height: 792px;
+margin: 0 auto;
+text-align: center;
 
 }
-.contain{
-  width:
-}
+
 #container {
   width: 516px;
   height: 435px;
   display: block;
   background-color:rgb(124, 124, 124);
-margin: 0 auto;
+   margin: 0 auto;
 
 }
 
 .squares{
-width: 60px;
-height: 60px;
-background-color: black;
-float:left;
-display: inline-block;
-margin:0 8px;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  float:left;
+  display: inline-block;
+  margin:0 8px;
 
 
 
@@ -61,6 +62,39 @@ margin:0 8px;
   border-color: rgba(0, 255, 255, 0);
   top: -5%;
 }
+
+#score{
+  border-radius: 27%;
+  border-color: black;
+  height: 56%;
+}
+
+#countdownHolder {
+  border-radius: 27%;
+  border-color: black;
+  height: 56%;
+}
+
+#player1Points {
+  border-radius: 27%;
+  border-color: black;
+  height: 89%;
+
+}
+
+
+#player2Points {
+  border-radius: 27%;
+  border-color: black;
+  height: 89%;
+
+}
+
+div.squares {
+    background-color: black
+    }
+
+
 
 #square0, #square7, #square14, #square21, #square28, #square35 {
   margin: 0 8px 0 0px;

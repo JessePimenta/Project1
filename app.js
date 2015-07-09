@@ -24,6 +24,18 @@ var playerMove = 0;
 
 $(function(){
 
+  $(".squares").mouseover(function(){
+      console.log("Over");
+      $(this).css('border-radius', '50%');
+      }
+  );
+  $(".squares").mouseleave(function(){
+      console.log("Over");
+      $(this).css('border-radius', '0%');
+      }
+  );
+
+
 $('#begin').click(function(){                          // starts game
 
   randomLight = Math.floor(Math.random() * 30);       //
@@ -39,9 +51,6 @@ $('#begin').click(function(){                          // starts game
       $('#countdownHolder')[0].value = countdownCurrent--;
       if(countdownCurrent === countdownEnd){
         clearTimeout(countdownInterval);
-
-
-
         alert('game over!');
       }
 
