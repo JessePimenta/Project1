@@ -10,7 +10,7 @@ font-family: monospace;
 }
 
 body:hover {
-transition: background-color 35s ease;
+transition: background-color 30s ease;
 background-color: white;
 }
 
@@ -43,7 +43,7 @@ margin: 0 auto;
 }
 
 #container:hover {
-transition: background-color 20s ease;
+transition: background-color 25s ease;
 background-color: white;
 }
 
