@@ -22,6 +22,7 @@ var player2Wins;
 var playerMove = 0;
 
 
+
 $(function(){
   // $( document ).click(function() {
   //   $( "#toggle" ).effect( "shake" );
@@ -50,7 +51,7 @@ $(function(){
       //$(this).css("background-color", "black");
 
   });
-// 
+//
 //   $( document ).ready(function() {
 //       console.log( "ready" );
 //       audio = $(".song");
@@ -118,5 +119,6 @@ $('#begin').click(function(){                          // starts game
     console.log('works');
     alert('paused');
   });
-
+  var $title = $('#title');
+     $title.fadeIn(3000).delay(3000).fadeOut(3000);
 }); // closing
