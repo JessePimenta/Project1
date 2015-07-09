@@ -24,6 +24,13 @@ var playerMove = 0;
 
 $(function(){
 
+
+  $("#container").mouseover(function(){
+      console.log("Over");
+      // $(this).css('background-color', 'white');
+      });
+
+
   $(".squares").mouseover(function(){
       console.log("Over");
       $(this).css('border-radius', '50%');
@@ -38,10 +45,9 @@ $(function(){
 
   $(".dotStyle").hover(function(){
       console.log("dots mouse over");
-      $(this).css("color", "black");
+      //$(this).css("background-color", "black");
 
   });
-
 
 
 $('#begin').click(function(){                          // starts game

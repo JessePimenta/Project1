@@ -26,7 +26,9 @@ text-align: center;
   display: inline-block;
   margin:0 8px;
 
-
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
 
 }
 .squareRow{
@@ -61,6 +63,19 @@ text-align: center;
   right: -28px;
   border-color: rgba(0, 255, 255, 0);
   top: -5%;
+  visibility: visible;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+
+.dotStyle:hover {
+  background-color:black;
+  visibility: hidden;
+}
+
+.squares:hover {
+  background-color:white;
 }
 
 #score{
