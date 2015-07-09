@@ -50,10 +50,28 @@ $(function(){
       //$(this).css("background-color", "black");
 
   });
-
-  
-
-
+// 
+//   $( document ).ready(function() {
+//       console.log( "ready" );
+//       audio = $(".song");
+//       addEventHandlers();
+//   });
+//       audio = $(".song");
+//       addEventHandlers();
+//
+//
+//   function addEventHandlers(){
+//             $("a.load").click(loadAudio);
+//             $("a.start").click(startAudio);
+//             $("a.forward").click(forwardAudio);
+//             $("a.back").click(backAudio);
+//             $("a.pause").click(pauseAudio);
+//             $("a.stop").click(stopAudio);
+//             $("a.volume-up").click(volumeUp);
+//             $("a.volume-down").click(volumeDown);
+//             $("a.mute").click(toggleMuteAudio);
+// }
+//
 
 
 $('#begin').click(function(){                          // starts game

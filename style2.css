@@ -29,7 +29,7 @@ h3 {
 visibility: visible;
 }
 
-h3:hover {
+h3:onload {
 visibility: hidden;
 transition: 3s;
 }
@@ -107,30 +107,28 @@ background-color:white;
 }
 
 #score{
-border-radius: 27%;
-border-color: black;
-height: 80%;
+border-radius: 100%;
+border-color: white;
+height: 150%;
 text-align: center;
 }
 
 #countdownHolder {
-border-radius: 27%;
-border-color: black;
-height: 80%;
+border-radius: 100%;
+border-color: white;
+height: 160%;
 text-align: center;
 }
 
 #player1Points {
-border-radius: 27%;
-border-color: black;
-height: 89%;
-text-align: center;
-}
+border-radius: 160%;
+height: 160%;
+text-align: center;}
+
 
 #player2Points {
-border-radius: 27%;
-border-color: black;
-height: 89%;
+border-radius: 100%;
+height: 160%;
 text-align: center;
 }
 
@@ -140,7 +138,21 @@ background-color: black;
 
 input[type='text'] {
 font-size: 24px;
-font-family: monospace; }
+font-family: monospace;
+}
+
+audio {
+position: relative;
+top: 826px;
+right: -106px;
+}
+
+button [type='button'] {
+  font-size: 24px;
+  font-family: monospace;
+
+}
+
 
 #square0, #square7, #square14, #square21, #square28, #square35 {
 margin: 0 8px 0 0px;
