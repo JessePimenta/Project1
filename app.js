@@ -27,7 +27,7 @@ $(function(){
 
   $("#container").mouseover(function(){
       console.log("Over");
-      $(this).css('background-color', 'white');
+      // $(this).css('background-color', 'white');
       });
 
 
