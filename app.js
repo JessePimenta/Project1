@@ -51,6 +51,21 @@ $(function(){
 
   });
 
+  $('#audioSlider').slider({
+    orientation: "vertical",
+    value: audio1.volume,
+    min: 0,
+    max: 1,
+    range: 'min',
+    animate: true,
+    step: 0.1,
+    slide: function(e, ui) {
+        audio1.volume = ui.value;
+    }
+});
+
+
+
 
 $('#begin').click(function(){                          // starts game
 
