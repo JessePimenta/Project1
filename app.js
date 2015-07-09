@@ -27,13 +27,21 @@ $(function(){
   $(".squares").mouseover(function(){
       console.log("Over");
       $(this).css('border-radius', '50%');
-      }
-  );
+
+  });
+
   $(".squares").mouseleave(function(){
       console.log("Over");
       $(this).css('border-radius', '0%');
-      }
-  );
+
+  });
+
+  $(".dotStyle").hover(function(){
+      console.log("dots mouse over");
+      $(this).css("color", "black");
+
+  });
+
 
 
 $('#begin').click(function(){                          // starts game
