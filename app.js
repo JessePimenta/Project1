@@ -23,12 +23,14 @@ var playerMove = 0;
 
 
 $(function(){
+  // $( document ).click(function() {
+  //   $( "#toggle" ).effect( "shake" );
+  // });
 
-
-  $("#container").mouseover(function(){
-      console.log("Over");
-      // $(this).css('background-color', 'white');
-      });
+  $(".dotStyle").click(function(){
+      console.log("shake works");
+      $('#container').effect( "shake" );
+    });
 
 
   $(".squares").mouseover(function(){

@@ -9,12 +9,23 @@ text-align: center;
 
 }
 
+body:hover {
+  transition: background-color 35s ease;
+  background-color: white;
+}
+
 #container {
   width: 516px;
   height: 435px;
   display: block;
   background-color:rgb(124, 124, 124);
    margin: 0 auto;
+
+}
+
+#container:hover {
+  transition: background-color 30s ease;
+  background-color: white;
 
 }
 
@@ -76,6 +87,10 @@ text-align: center;
 
 .squares:hover {
   background-color:white;
+}
+
+.squares.effect {
+
 }
 
 #score{
