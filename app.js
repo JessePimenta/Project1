@@ -35,44 +35,22 @@ $(function(){
 
 
   $(".squares").mouseover(function(){
-      console.log("Over");
+      // console.log("Over");
       $(this).css('border-radius', '50%');
 
   });
 
   $(".squares").mouseleave(function(){
-      console.log("Over");
+      // console.log("Over");
       $(this).css('border-radius', '0%');
 
   });
 
   $(".dotStyle").hover(function(){
-      console.log("dots mouse over");
+      // console.log("dots mouse over");
       //$(this).css("background-color", "black");
 
   });
-//
-//   $( document ).ready(function() {
-//       console.log( "ready" );
-//       audio = $(".song");
-//       addEventHandlers();
-//   });
-//       audio = $(".song");
-//       addEventHandlers();
-//
-//
-//   function addEventHandlers(){
-//             $("a.load").click(loadAudio);
-//             $("a.start").click(startAudio);
-//             $("a.forward").click(forwardAudio);
-//             $("a.back").click(backAudio);
-//             $("a.pause").click(pauseAudio);
-//             $("a.stop").click(stopAudio);
-//             $("a.volume-up").click(volumeUp);
-//             $("a.volume-down").click(volumeDown);
-//             $("a.mute").click(toggleMuteAudio);
-// }
-//
 
 
 $('#begin').click(function(){                          // starts game
@@ -91,7 +69,7 @@ $('#begin').click(function(){                          // starts game
       if(countdownCurrent === countdownEnd){
         clearTimeout(countdownInterval);
         $(title).html(score+2);
-        alert('Player 2 Turn');
+        alert('Player 2 Turn!');
       }
 
       }, 1000);
@@ -115,10 +93,12 @@ $('#begin').click(function(){                          // starts game
     console.log($('.dotStyle')[randomLight2]);
   });
 
-  $('.stop').click(function(){
-    console.log('works');
-    alert('paused');
-  });
+  $('reset').click(function() {
+        console.log('hello?');
+          var field= $('#score');
+          score.value= score.defaultValue;
+      });
+
   var $title = $('#title');
      $title.fadeIn(5000).delay(3000).fadeOut(30000);
      var $container = $('#container');

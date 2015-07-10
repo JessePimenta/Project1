@@ -7,9 +7,7 @@ height: 492px;
 margin: 0 auto;
 text-align: center;
 font-family: monospace;
-background-image: url('http://www.noao.edu/outreach/aop/observers/swasteroid.gif');
-background-size: contain;
-background-blend-mode: difference;
+
 }
 
 body:hover {
@@ -107,9 +105,9 @@ right: -28px;
 border-color: rgba(0, 255, 255, 0);
 top: -5%;
 visibility: visible;
--webkit-transition: all .5s;
--moz-transition: all .5s;
-transition: all .5s;
+-webkit-transition: all 1s;
+-moz-transition: all 1s;
+transition: all 1s;
 }
 
 .dotStyle:hover {
@@ -121,8 +119,6 @@ visibility: hidden;
 background-color:white;
 }
 
-.squares.effect {
-}
 #topField{
 width: 416px;
 height: 172px;
@@ -210,34 +206,18 @@ border-radius: 34px;
 font-family: monospace;
 }
 
-#reset{
+#reset {
 position: relative;
 left: 0;
 top: 11px;
-/* text-align: center; */
 font-size: 11pt;
 color: black;
 background-color: white;
-/* padding: 5px 15px 5px 15px; */
 border-radius: 34px;
 font-family: monospace;
 }
 
-#pause{
-position: relative;
-left: 0;
-top: 191px;
-left: 0px;
-/* text-align: center; */
-font-size: 11pt;
-color: black;
-background-color: white;
-/* padding: 5px 15px 5px 15px; */
-border-radius: 34px;
-font-family: monospace;
-}
-
-#instructions{
+#instructions {
 width: 516px;
 height: 100px;
 text-align: center;
@@ -246,7 +226,7 @@ position: relative;
 top: 34px;
 }
 
-#instructionsTitle{
+#instructionsTitle {
 color:white;
 
 }
@@ -259,10 +239,10 @@ margin: 0 8px 0 0px;
 margin: 0px 0px 0px 8px;
 }
 
-input:focus,textarea:focus,select:focus{
-border:1px solid #fafafa;
--webkit-box-shadow:0 0 6px #007eff;
--moz-box-shadow:0 0 5px #007eff;
-box-shadow:0 0 5px #007eff;
-outline: none;
+:focus {
+  outline-color: black;
+  /*outline-style: none;*/
+  outline-style: inset;
+  opacity: .5;
+  outline-width: thick;
 }
