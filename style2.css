@@ -7,6 +7,9 @@ height: 492px;
 margin: 0 auto;
 text-align: center;
 font-family: monospace;
+background-image: url('http://www.noao.edu/outreach/aop/observers/swasteroid.gif');
+background-size: contain;
+background-blend-mode: difference;
 }
 
 body:hover {
@@ -52,7 +55,7 @@ background-color:rgb(124, 124, 124);
 margin: 0 auto;
 border-radius: 20px;
 position: relative;
-  top: 62px;
+top: 62px;
 
 }
 
@@ -154,15 +157,15 @@ height: 50px;
 }
 
 #countdownHolder {
-  border-radius: 100%;
-  border-color: white;
-  height: 160%;
-  /* text-align: center; */
-  left: -43%;
-  top: 121px;
-  position: relative;
-  width: 13%;
-  height: 50px;
+border-radius: 100%;
+border-color: white;
+height: 160%;
+/* text-align: center; */
+left: -43%;
+top: 121px;
+position: relative;
+width: 13%;
+height: 50px;
 }
 
 #player1Points {
@@ -188,39 +191,40 @@ font-family: monospace;
 }
 
 audio {
-position: relative;
-top: 826px;
-right: -106px;
+  position: relative;
+  top: 223px;
+  right: -3px;
+  visibility: visible;
 }
 
 #begin {
-  position: relative;
-    left: 0;
-    top: -21px;
-    /* text-align: center; */
-    font-size: 11pt;
-    color: black;
-    background-color: white;
-    /* padding: 5px 15px 5px 15px; */
-    border-radius: 34px;
-    font-family: monospace;
+position: relative;
+left: 0;
+top: -21px;
+/* text-align: center; */
+font-size: 11pt;
+color: black;
+background-color: white;
+/* padding: 5px 15px 5px 15px; */
+border-radius: 34px;
+font-family: monospace;
 }
 
 #reset{
-  position: relative;
-  left: 0;
-  top: 11px;
-  /* text-align: center; */
-  font-size: 11pt;
-  color: black;
-  background-color: white;
-  /* padding: 5px 15px 5px 15px; */
-  border-radius: 34px;
-  font-family: monospace;
+position: relative;
+left: 0;
+top: 11px;
+/* text-align: center; */
+font-size: 11pt;
+color: black;
+background-color: white;
+/* padding: 5px 15px 5px 15px; */
+border-radius: 34px;
+font-family: monospace;
 }
 
 #pause{
-  position: relative;
+position: relative;
 left: 0;
 top: 191px;
 left: 0px;
@@ -256,9 +260,9 @@ margin: 0px 0px 0px 8px;
 }
 
 input:focus,textarea:focus,select:focus{
-  border:1px solid #fafafa;
-  -webkit-box-shadow:0 0 6px #007eff;
-  -moz-box-shadow:0 0 5px #007eff;
-  box-shadow:0 0 5px #007eff;
-  outline: none;
+border:1px solid #fafafa;
+-webkit-box-shadow:0 0 6px #007eff;
+-moz-box-shadow:0 0 5px #007eff;
+box-shadow:0 0 5px #007eff;
+outline: none;
 }

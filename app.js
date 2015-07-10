@@ -91,7 +91,7 @@ $('#begin').click(function(){                          // starts game
       if(countdownCurrent === countdownEnd){
         clearTimeout(countdownInterval);
         $(title).html(score+2);
-        alert('game over!');
+        alert('Player 2 Turn');
       }
 
       }, 1000);
