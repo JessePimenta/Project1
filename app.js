@@ -23,6 +23,7 @@ var playerMove = 0;
 
 
 
+
 $(function(){
   // $( document ).click(function() {
   //   $( "#toggle" ).effect( "shake" );
@@ -53,6 +54,22 @@ $(function(){
   });
 
 
+  document.getElementById('reset').onclick = function() {
+        var field= document.getElementById('countdownHolder');
+        countdownHolder.value= countdownHolder.defaultValue;
+};
+
+document.getElementById('reset').onclick = function() {
+      var field= document.getElementById('score');
+      score.value= score.defaultValue;
+};
+
+
+var audiofx = $('#fx1')[0];
+$(".dotStyle").click(function() {
+  audio.play();
+});
+
 $('#begin').click(function(){                          // starts game
 
   randomLight = Math.floor(Math.random() * 30);       //
@@ -69,6 +86,7 @@ $('#begin').click(function(){                          // starts game
       if(countdownCurrent === countdownEnd){
         clearTimeout(countdownInterval);
         $(title).html(score+2);
+
         alert('Player 2 Turn!');
       }
 
@@ -93,14 +111,8 @@ $('#begin').click(function(){                          // starts game
     console.log($('.dotStyle')[randomLight2]);
   });
 
-  $('reset').click(function() {
-        console.log('hello?');
-          var field= $('#score');
-          score.value= score.defaultValue;
-      });
-
   var $title = $('#title');
      $title.fadeIn(5000).delay(3000).fadeOut(30000);
      var $container = $('#container');
-        $title.fadeIn(5000).delay(3000).fadeOut(30000);
+        $container.fadeIn(5000).delay(2000).fadeOut(80000).css('color','black');
 }); // closing
