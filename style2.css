@@ -1,9 +1,9 @@
 body {
 background-color: black;
-color: white;
+/*color: white;*/
 display: block;
-width: 800px;
-height: 792px;
+width: 1200px;
+height: 492px;
 margin: 0 auto;
 text-align: center;
 font-family: monospace;
@@ -15,11 +15,14 @@ background-color: white;
 }
 
 h2 {
-font-size: 40px;
+font-size: 30px;
 }
 
-title {
-  
+#title {
+display: none;
+opacity: 1;
+font-size: 30px;
+color: white;
 }
 
 #audioSlider{
@@ -30,7 +33,10 @@ margin-right: -34px;
 }
 
 h3 {
-visibility: visible;
+  display: none;
+  opacity: 1;
+  font-size: 20px;
+  color: black;
 }
 
 h3: {
@@ -158,6 +164,17 @@ button [type='button'] {
 
 }
 
+#instructions{
+  width: 516px;
+  height: 100px;
+  text-align: center;
+  color:white;
+}
+
+#instructionsTitle{
+  color:white;
+
+}
 
 #square0, #square7, #square14, #square21, #square28, #square35 {
 margin: 0 8px 0 0px;

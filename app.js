@@ -90,6 +90,7 @@ $('#begin').click(function(){                          // starts game
       $('#countdownHolder')[0].value = countdownCurrent--;
       if(countdownCurrent === countdownEnd){
         clearTimeout(countdownInterval);
+        $(title).html(score);
         alert('game over!');
       }
 
@@ -105,7 +106,6 @@ $('#begin').click(function(){                          // starts game
 
     console.log(score);
   $('#score')[0].value = score+2;
-  $('#player1Points')[0].value = score+2;
     var randomLight2 = Math.floor(Math.random() * 30);
     console.log(randomLight2);
     checkDot = $('.dotStyle')[randomLight2];
@@ -120,5 +120,5 @@ $('#begin').click(function(){                          // starts game
     alert('paused');
   });
   var $title = $('#title');
-     $title.fadeIn(3000).delay(3000).fadeOut(3000);
+     $title.fadeIn(5000).delay(3000).fadeOut(30000);
 }); // closing
