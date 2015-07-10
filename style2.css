@@ -33,10 +33,10 @@ margin-right: -34px;
 }
 
 h3 {
-  display: none;
-  opacity: 1;
-  font-size: 20px;
-  color: black;
+display: none;
+opacity: 1;
+font-size: 20px;
+color: black;
 }
 
 h3: {
@@ -50,6 +50,10 @@ height: 435px;
 display: block;
 background-color:rgb(124, 124, 124);
 margin: 0 auto;
+border-radius: 20px;
+position: relative;
+  top: 62px;
+
 }
 
 #container:hover {
@@ -64,6 +68,7 @@ background-color: black;
 float:left;
 display: inline-block;
 margin:0 8px;
+border-radius: 2px;
 
 -webkit-transition: all .5s;
 -moz-transition: all .5s;
@@ -115,19 +120,49 @@ background-color:white;
 
 .squares.effect {
 }
+#topField{
+width: 416px;
+height: 172px;
+
+}
+
+
+#scoreboard {
+color: white;
+position: relative;
+right: 12px;
+top: -9px;
+}
+
+#timer{
+color: white;
+position: relative;
+left: -346px;
+top: 114px;
+}
 
 #score{
 border-radius: 100%;
 border-color: white;
-height: 150%;
-text-align: center;
+height: 160%;
+/* text-align: center; */
+left: 41%;
+top: 0px;
+position: relative;
+width: 13%;
+height: 50px;
 }
 
 #countdownHolder {
-border-radius: 100%;
-border-color: white;
-height: 160%;
-text-align: center;
+  border-radius: 100%;
+  border-color: white;
+  height: 160%;
+  /* text-align: center; */
+  left: -43%;
+  top: 121px;
+  position: relative;
+  width: 13%;
+  height: 50px;
 }
 
 #player1Points {
@@ -158,21 +193,57 @@ top: 826px;
 right: -106px;
 }
 
-button [type='button'] {
-  font-size: 24px;
-  font-family: monospace;
+#begin {
+  position: relative;
+    left: 0;
+    top: -21px;
+    /* text-align: center; */
+    font-size: 11pt;
+    color: black;
+    background-color: white;
+    /* padding: 5px 15px 5px 15px; */
+    border-radius: 34px;
+    font-family: monospace;
+}
 
+#reset{
+  position: relative;
+  left: 0;
+  top: 11px;
+  /* text-align: center; */
+  font-size: 11pt;
+  color: black;
+  background-color: white;
+  /* padding: 5px 15px 5px 15px; */
+  border-radius: 34px;
+  font-family: monospace;
+}
+
+#pause{
+  position: relative;
+left: 0;
+top: 191px;
+left: 0px;
+/* text-align: center; */
+font-size: 11pt;
+color: black;
+background-color: white;
+/* padding: 5px 15px 5px 15px; */
+border-radius: 34px;
+font-family: monospace;
 }
 
 #instructions{
-  width: 516px;
-  height: 100px;
-  text-align: center;
-  color:white;
+width: 516px;
+height: 100px;
+text-align: center;
+color:white;
+position: relative;
+top: 34px;
 }
 
 #instructionsTitle{
-  color:white;
+color:white;
 
 }
 
@@ -182,4 +253,12 @@ margin: 0 8px 0 0px;
 
 #square6, #square13, #square20, #square27, #square34, #square41 {
 margin: 0px 0px 0px 8px;
+}
+
+input:focus,textarea:focus,select:focus{
+  border:1px solid #fafafa;
+  -webkit-box-shadow:0 0 6px #007eff;
+  -moz-box-shadow:0 0 5px #007eff;
+  box-shadow:0 0 5px #007eff;
+  outline: none;
 }

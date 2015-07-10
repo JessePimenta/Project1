@@ -90,7 +90,7 @@ $('#begin').click(function(){                          // starts game
       $('#countdownHolder')[0].value = countdownCurrent--;
       if(countdownCurrent === countdownEnd){
         clearTimeout(countdownInterval);
-        $(title).html(score);
+        $(title).html(score+2);
         alert('game over!');
       }
 
@@ -121,4 +121,6 @@ $('#begin').click(function(){                          // starts game
   });
   var $title = $('#title');
      $title.fadeIn(5000).delay(3000).fadeOut(30000);
+     var $container = $('#container');
+        $title.fadeIn(5000).delay(3000).fadeOut(30000);
 }); // closing
