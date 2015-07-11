@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style2.css">
+<meta charset="utf-8">
+<title>Lightspeed</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.8.1.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<audio autoplay>
+<source src="05 Mozaic.mp3" type="audio/mpeg" id="song">
+<source src="Menu-ChangeAmount.mp3" type="audio/mpeg" id="fx1"></source>
+</audio>
+</head>
+<body>
+<div id="title">L I G H T S P E E D </div>
+<!-- <center><h3>Welcome to Lightspeed!</h3></center> -->
+<center>
+<div id="topField">
+<div>
+<div></div>
+<div id="timer" align=right>Time Left:</div>
+<div><input type="text" id="countdownHolder" size="4"></div>
+<div><input type="button" id="begin" size="20" value="Push Start to Play"></input></div>
+<input id="reset" type="button" value="Reset"></div>
+<div id="scoreboard" align=right> Score:</div>
+<div><input type="text" id="score" size="4"></div>
+
+<!-- <tr></tr> -->
+
+
+<!-- <td align=right>P1 Score:</td>
+<td><input type="text" id="player1Points" size="4"></td> -->
+<!-- <td align=right>P2 Score:</td>
+<td><input type="text" id="player2Points" size="4"></td> -->
+
+</div>
+</center>
+<div id='container'>
+
+<div class="squareRow">
+<div id="square0" class="squares"></div>
+<div id="square1" class="squares"></div>
+<div id="square2" class="squares"></div>
+<div id="square3" class="squares"></div>
+<div id="square4" class="squares"></div>
+<div id="square5" class="squares"></div>
+<div id="square6" class="squares"></div>
+</div>
+<div class="dotRow">
+<button id="lightDot(0)" class="dotStyle"></button>
+<button id="lightDot(1)" class="dotStyle"></button>
+<button id="lightDot(2)" class="dotStyle"></button>
+<button id="lightDot(3)" class="dotStyle"></button>
+<button id="lightDot(4)" class="dotStyle"></button>
+<button id="lightDot(5)" class="dotStyle"></button>
+</div>
+
+<div class="squareRow">
+<div id="square7"  class="squares"></div>
+<div id="square8"  class="squares"></div>
+<div id="square9"  class="squares"></div>
+<div id="square10" class="squares"></div>
+<div id="square11" class="squares"></div>
+<div id="square12" class="squares"></div>
+<div id="square13" class="squares"></div>
+
+</div>
+<div class="dotRow">
+<button id="lightDot(6)"  class="dotStyle"></button>
+<button id="lightDot(7)"  class="dotStyle"></button>
+<button id="lightDot(8)"  class="dotStyle"></button>
+<button id="lightDot(9)"  class="dotStyle"></button>
+<button id="lightDot(10)" class="dotStyle"></button>
+<button id="lightDot(11)" class="dotStyle"></button>
+</div>
+
+<div class="squareRow">
+<div id="square14"  class="squares"></div>
+<div id="square15"  class="squares"></div>
+<div id="square16"  class="squares"></div>
+<div id="square17"  class="squares"></div>
+<div id="square18"  class="squares"></div>
+<div id="square19"  class="squares"></div>
+<div id="square20"  class="squares"></div>
+</div>
+<div class="dotRow">
+<button id="lightDot(12)" class="dotStyle"></button>
+<button id="lightDot(13)" class="dotStyle"></button>
+<button id="lightDot(14)" class="dotStyle"></button>
+<button id="lightDot(15)" class="dotStyle"></button>
+<button id="lightDot(16)" class="dotStyle"></button>
+<button id="lightDot(17)" class="dotStyle"></button>
+</div>
+
+<div class="squareRow">
+<div id="square21"  class="squares"></div>
+<div id="square22"  class="squares"></div>
+<div id="square23"  class="squares"></div>
+<div id="square24"  class="squares"></div>
+<div id="square25"  class="squares"></div>
+<div id="square26"  class="squares"></div>
+<div id="square27"  class="squares"></div>
+</div>
+<div class="dotRow">
+<button id="lightDot(18)" class="dotStyle"></button>
+<button id="lightDot(19)" class="dotStyle"></button>
+<button id="lightDot(20)" class="dotStyle"></button>
+<button id="lightDot(21)" class="dotStyle"></button>
+<button id="lightDot(22)" class="dotStyle"></button>
+<button id="lightDot(23)" class="dotStyle"></button>
+</div>
+
+<div class="squareRow">
+<div id="square28"  class="squares"></div>
+<div id="square29"  class="squares"></div>
+<div id="square30"  class="squares"></div>
+<div id="square31"  class="squares"></div>
+<div id="square32"  class="squares"></div>
+<div id="square33"  class="squares"></div>
+<div id="square34"  class="squares"></div>
+</div>
+<div class="dotRow">
+<button id="lightDot(24)" class="dotStyle"></button>
+<button id="lightDot(25)" class="dotStyle"></button>
+<button id="lightDot(26)" class="dotStyle"></button>
+<button id="lightDot(27)" class="dotStyle"></button>
+<button id="lightDot(28)" class="dotStyle"></button>
+<button id="lightDot(29)" class="dotStyle"></button>
+</div>
+
+<div class="squareRow">
+<div id="square35"  class="squares"></div>
+<div id="square36"  class="squares"></div>
+<div id="square37"  class="squares"></div>
+<div id="square38"  class="squares"></div>
+<div id="square39"  class="squares"></div>
+<div id="square40"  class="squares"></div>
+<div id="square41"  class="squares"></div>
+</div>
+</div>
+</div>
+<center>
+<div>
+<div id="instructionsTitle"><p><strong>Instructions:</strong></p></div>
+<div id="instructions">
+<p>SEE WHO CAN HIT MORE LIGHT-DOTS ON THE 30-DOT GRID IN A SPAN OF 30 SECONDS.
+THE DOTS WILL BE RANDOMLY GENERATED ON THE GRID.
+DEMONSTRATE YOUR FOCUSING ABILITY, AND HOW COOL YOU ARE.
+</p></div>
+<div><p>HITTING THE WRONG LIGHT WILL DEDUCT A POINT.</p></div>
+<div><p>HOVERING ON THE DOT FOR TOO LONG WILL CAUSE IT TO DISSAPEAR!</p></div>
+</div>
+</center>
+<script src="app.js" charset="utf-8">
+</script>
+</body>
+</html>
