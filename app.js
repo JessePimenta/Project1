@@ -26,11 +26,6 @@ $(function(){
 //   $( "#toggle" ).effect( "shake" );
 // });
 
-$(".dotStyle").click(function(){
-console.log("shake works");
-$('#container').effect( "shake" );
-});
-
 
 $(".squares").mouseover(function(){
 // console.log("Over");
@@ -51,9 +46,41 @@ $(".dotStyle").hover(function(){
 });
 
 
-function playAudio(){
+$(".dotStyle").click(function(){
+console.log("shake works");
+$('#container').effect( "shake" );
+});
+
+
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+    var args = $.speed(duration, easing, complete);
+    var step = args.step;
+    return this.each(function(i, e) {
+        args.step = function(now) {
+            $.style(e, 'transform', 'rotate(' + now + 'deg)');
+            if (step) return step.apply(this, arguments);
+        };
+
+        $({deg: 0}).animate({deg: angle}, args);
+    });
+};
+
+$(function(){
+    $(".dotStyle").click(function(){
+        $(".squares").animateRotate(90, 2000, "linear", function(){
+            console.log(this); //this is supposed to be the DOM node, but it isn't
+        });
+    });
+    });
+
+
+function playAudioButton(){
 var audio1= new Audio('Menu-ChangeAmount.mp3');
 audio1.play();}
+
+function playAudioStart(){
+var audio2= new Audio('snd_se_assist_Robin_move_start.mp3');
+audio2.play();}
 
 
 // before game //
@@ -61,7 +88,7 @@ audio1.play();}
 
 
 $('#begin').click(function(){                          // starts game
-
+playAudioStart();
 randomLight = Math.floor(Math.random() * 30);       //
 console.log(randomLight);
 $('.dotStyle')[randomLight].focus(function(){
@@ -88,7 +115,8 @@ $('.dotStyle').click(function(){
 console.log(checkDot);
 if(checkDot == this){score++;}
 else{score--;}
-playAudio();
+playAudioButton();
+
 
 console.log(score);
 $('#score')[0].value = score+2;
@@ -111,6 +139,6 @@ score.value= score.defaultValue;
 var $title = $('#title');
 $title.fadeIn(5000).delay(3000).fadeOut(30000).fadeIn(1000);
 var $container = $('#container');
-$container.fadeIn(5000).delay(2000).fadeOut(80000).css('color','grey');
+$container.fadeIn(5000).delay(2000).fadeOut(80000).fadeIn(10000).css('color','grey');
 
 }); // closing

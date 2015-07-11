@@ -85,6 +85,11 @@ border-radius: 2px;
 transition: all .5s;
 }
 
+.squares:hover {
+background-color:white;
+
+}
+
 .squareRow{
 width: 100%;
 height: 60px;
@@ -114,9 +119,9 @@ right: -28px;
 border-color: rgba(0, 255, 255, 0);
 top: -5%;
 visibility: visible;
--webkit-transition: all 1s;
--moz-transition: all 1s;
-transition: all 1s;
+-webkit-transition: all .8s;
+-moz-transition: all .8s;
+transition: all .8s;
 }
 
 .dotStyle:hover {
@@ -124,9 +129,7 @@ background-color:black;
 visibility: hidden;
 }
 
-.squares:hover {
-background-color:white;
-}
+
 
 #topField{
 width: 416px;
