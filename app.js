@@ -7,6 +7,7 @@ var countdownInterval;
 var countdownEnd = -1;
 var randomLight = Math.floor(Math.random() * 30);
 var score= 0;
+var defaultScore = 0
 var $container = $('#container');
 var $title = $('#title');
 // var player1= 1;
@@ -41,13 +42,6 @@ $(this).css('border-radius', '0%');
 
 });
 
-$(".dotStyle").hover(function(){
-// console.log("dots mouse over");
-//$(this).css("background-color", "black");
-
-});
-
-
 
 $.fn.animateRotate = function(angle, duration, easing, complete) {
     var args = $.speed(duration, easing, complete);
@@ -65,7 +59,7 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
 $(function(){
     $(".dotStyle").click(function(){
         $container.animateRotate(90, 5000, "linear", function(){
-            console.log(this); //this is supposed to be the DOM node, but it isn't
+            console.log(this);
         });
     });
     });
@@ -73,7 +67,7 @@ $(function(){
     $(function(){
         $("#begin").click(function(){
             $container.animateRotate(90, 8000, "linear", function(){
-                console.log(this); //this is supposed to be the DOM node, but it isn't
+                console.log(this);
             });
         });
         });
@@ -83,9 +77,6 @@ function playAudioButton(){
 var audio1= new Audio('Menu-ChangeAmount.mp3');
 audio1.play();}
 
-function playAudioStart(){
-var audio2= new Audio('snd_se_assist_Robin_move_start.mp3');
-audio2.play();}
 
 
 // before game //
@@ -138,8 +129,8 @@ $('.dotStyle').click(function(){
 document.getElementById('reset').onclick= function() {
 var field= document.getElementById('countdownHolder');
 var field2= document.getElementById('score');
-countdownHolder.value = countdownMax;
-score.value = 0;
+field.value = countdownMax;
+field2.value = defaultScore;
 };
 
 var $title = $('#title');
