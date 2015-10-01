@@ -1,5 +1,3 @@
-
-
 var countdownMax=30;
 var countdownCurrent=0;
 var countdown=false;
@@ -8,8 +6,7 @@ var countdownEnd = -1;
 var randomLight = Math.floor(Math.random() * 30);
 var score= 0;
 var defaultScore = 0
-var $container = $('#container');
-var $title = $('#title');
+
 // var player1= 1;
 // var player2= 2;
 // var player1Points;
@@ -25,22 +22,24 @@ var $title = $('#title');
 // var playerMove = 0;
 
 $(function(){
-// $( document ).click(function() {
-//   $( "#toggle" ).effect( "shake" );
-// });
-
 
 $(".squares").mouseover(function(){
-// console.log("Over");
+
 $(this).css('border-radius', '50%');
 
 });
 
 $(".squares").mouseleave(function(){
-// console.log("Over");
+
 $(this).css('border-radius', '0%');
 
 });
+
+$(".dotStyle").hover(function(){
+  $container.effect('shake')
+
+});
+
 
 
 $.fn.animateRotate = function(angle, duration, easing, complete) {
@@ -59,7 +58,7 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
 $(function(){
     $(".dotStyle").click(function(){
         $container.animateRotate(90, 5000, "linear", function(){
-            console.log(this);
+            console.log(this); //this is supposed to be the DOM node, but it isn't
         });
     });
     });
@@ -67,17 +66,20 @@ $(function(){
     $(function(){
         $("#begin").click(function(){
             $container.animateRotate(90, 8000, "linear", function(){
-                console.log(this);
+                console.log(this); //this is supposed to be the DOM node, but it isn't
             });
         });
         });
 
-
+//audio
 function playAudioButton(){
 var audio1= new Audio('Menu-ChangeAmount.mp3');
 audio1.play();}
 
-
+function playAudioStart(){
+var audio2= new Audio('snd_se_assist_Robin_move_start.mp3');
+audio2.play();}
+//
 
 // before game //
 
@@ -85,21 +87,22 @@ audio1.play();}
 
 $('#begin').click(function(){                          // starts game
 playAudioStart();
-randomLight = Math.floor(Math.random() * 30);       //
+randomLight = Math.floor(Math.random() * 30);         // randomizer
 console.log(randomLight);
 $('.dotStyle')[randomLight].focus(function(){
-alert( "Handler for .focus() called." );
 });
 console.log($('.dotStyle')[randomLight]);
 
-countdownCurrent = countdownMax;
+
+
+countdownCurrent = countdownMax;                    // countdown
 console.log(countdownCurrent+" / "+countdownMax);
 countdownInterval = setInterval(function(){
 $('#countdownHolder')[0].value = countdownCurrent--;
 if(countdownCurrent === countdownEnd){
 clearTimeout(countdownInterval);
 $(title).html(score+2);
-alert('Game Over. Your score is' + score+2);
+alert('Game Over! Try Again?');
 }
 
 }, 1000);
@@ -107,18 +110,22 @@ alert('Game Over. Your score is' + score+2);
 });
 var checkDot = null;
 
+//game moves
+
 $('.dotStyle').click(function(){
-  $container.effect("shake");
   console.log(checkDot);
   if(checkDot == this){score++;}
   else{score--;}
   playAudioButton();
 
+//
+
 
   console.log(score);
   $('#score')[0].value = score+2;
+
   var randomLight2 = Math.floor(Math.random() * 30);
-  console.log(randomLight2);
+
   checkDot = $('.dotStyle')[randomLight2];
   $('.dotStyle')[randomLight2].focus(function(){
   alert( "Handler for .focus() called." );
@@ -136,7 +143,8 @@ field2.value = defaultScore;
 var $title = $('#title');
 $title.fadeIn(5000).delay(3000).fadeOut(30000).fadeIn(1000);
 
-$('#container').fadeIn(5000).delay(2000).fadeOut(80000).fadeIn(10000).css('color','grey');
+var $container = $('#container');
+$container.fadeIn(5000).delay(2000).fadeOut(40000).fadeIn(10000).css('color','grey');
 
 });
 // closing
