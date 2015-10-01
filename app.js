@@ -117,11 +117,11 @@ alert('Game Over. Your score is' + score+2);
 var checkDot = null;
 
 $('.dotStyle').click(function(){
+  $container.effect("shake");
   console.log(checkDot);
   if(checkDot == this){score++;}
   else{score--;}
   playAudioButton();
-  $container.effect("shake");
 
 
   console.log(score);
@@ -139,7 +139,7 @@ document.getElementById('reset').onclick= function() {
 var field= document.getElementById('countdownHolder');
 var field2= document.getElementById('score');
 countdownHolder.value = countdownMax;
-score.value= 0;
+score.value = 0;
 };
 
 var $title = $('#title');
@@ -147,4 +147,5 @@ $title.fadeIn(5000).delay(3000).fadeOut(30000).fadeIn(1000);
 
 $('#container').fadeIn(5000).delay(2000).fadeOut(80000).fadeIn(10000).css('color','grey');
 
-}); // closing
+});
+// closing
