@@ -7,6 +7,8 @@ var countdownInterval;
 var countdownEnd = -1;
 var randomLight = Math.floor(Math.random() * 30);
 var score= 0;
+var $container = $('#container');
+var $title = $('#title');
 // var player1= 1;
 // var player2= 2;
 // var player1Points;
@@ -46,11 +48,6 @@ $(".dotStyle").hover(function(){
 });
 
 
-$(".dotStyle").click(function(){
-console.log("shake works");
-$('#container').effect( "shake" );
-});
-
 
 $.fn.animateRotate = function(angle, duration, easing, complete) {
     var args = $.speed(duration, easing, complete);
@@ -67,11 +64,19 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
 
 $(function(){
     $(".dotStyle").click(function(){
-        $(".squares").animateRotate(90, 2000, "linear", function(){
+        $container.animateRotate(90, 5000, "linear", function(){
             console.log(this); //this is supposed to be the DOM node, but it isn't
         });
     });
     });
+
+    $(function(){
+        $("#begin").click(function(){
+            $container.animateRotate(90, 8000, "linear", function(){
+                console.log(this); //this is supposed to be the DOM node, but it isn't
+            });
+        });
+        });
 
 
 function playAudioButton(){
@@ -103,7 +108,7 @@ $('#countdownHolder')[0].value = countdownCurrent--;
 if(countdownCurrent === countdownEnd){
 clearTimeout(countdownInterval);
 $(title).html(score+2);
-alert('Player 2 Turn!');
+alert('Game Over. Your score is' + score+2);
 }
 
 }, 1000);
@@ -112,33 +117,34 @@ alert('Player 2 Turn!');
 var checkDot = null;
 
 $('.dotStyle').click(function(){
-console.log(checkDot);
-if(checkDot == this){score++;}
-else{score--;}
-playAudioButton();
+  console.log(checkDot);
+  if(checkDot == this){score++;}
+  else{score--;}
+  playAudioButton();
+  $container.effect("shake");
 
 
-console.log(score);
-$('#score')[0].value = score+2;
-var randomLight2 = Math.floor(Math.random() * 30);
-console.log(randomLight2);
-checkDot = $('.dotStyle')[randomLight2];
-$('.dotStyle')[randomLight2].focus(function(){
-alert( "Handler for .focus() called." );
-});
-console.log($('.dotStyle')[randomLight2]);
-});
+  console.log(score);
+  $('#score')[0].value = score+2;
+  var randomLight2 = Math.floor(Math.random() * 30);
+  console.log(randomLight2);
+  checkDot = $('.dotStyle')[randomLight2];
+  $('.dotStyle')[randomLight2].focus(function(){
+  alert( "Handler for .focus() called." );
+  });
+  console.log($('.dotStyle')[randomLight2]);
+  });
 
 document.getElementById('reset').onclick= function() {
 var field= document.getElementById('countdownHolder');
 var field2= document.getElementById('score');
-countdownHolder.value= countdownHolder.defaultValue;
-score.value= score.defaultValue;
+countdownHolder.value = countdownMax;
+score.value= 0;
 };
 
 var $title = $('#title');
 $title.fadeIn(5000).delay(3000).fadeOut(30000).fadeIn(1000);
-var $container = $('#container');
-$container.fadeIn(5000).delay(2000).fadeOut(80000).fadeIn(10000).css('color','grey');
+
+$('#container').fadeIn(5000).delay(2000).fadeOut(80000).fadeIn(10000).css('color','grey');
 
 }); // closing

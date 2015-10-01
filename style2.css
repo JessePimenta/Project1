@@ -228,7 +228,7 @@ visibility: visible;
 }
 
 #instructions {
-width: 516px;
+width: 316px;
 height: 100px;
 text-align: center;
 color:white;
@@ -236,10 +236,26 @@ position: relative;
 top: 34px;
 }
 
+#instructions:click{
+  visibility: hidden;
+}
+
 #instructionsTitle {
 color:white;
 visibility: hidden;
 
+}
+
+p {
+
+position: relative;
+top: -639px;
+left: -448px;
+width: 49%%;
+line-height: 2;
+border: 5px solid white;
+margin-left: 5px;
+margin-right: 5px;
 }
 
 #square0, #square7, #square14, #square21, #square28, #square35 {
@@ -251,9 +267,9 @@ margin: 0px 0px 0px 8px;
 }
 
 :focus {
-  outline-color: black;
+  outline-color: red;
   /*outline-style: none;*/
   outline-style: inset;
-  opacity: .5;
+  opacity: 1;
   outline-width: thick;
 }
